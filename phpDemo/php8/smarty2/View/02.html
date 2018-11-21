@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>新建网页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta name="description" content="" />
+        <meta name="keywords" content="" />
+
+        <script type="text/javascript">
+
+        </script>
+
+        <style type="text/css">
+        </style>
+    </head>
+
+
+    <body>
+        <h2>变量调剂器使用</h2>
+        {$smarty.now}<br />
+        {$smarty.now|date_format:"%Y-%m-%d %H:%M:%S"}<br />{*时间格式化显示*}
+        {$addr|default:'beijing'}<br /> {*默认值*}
+        {$baidu}<br />
+        {$baidu|escape}<br />{*html标签转换为符合实体*}
+        {$baidu|indent:4:'hello'}<br /> {*缩进符号设置*}
+        {$title|nl2br}<br />{*\n 转换为br换行*}
+        {$talk|truncate:23:'...':true}<br />{*内容截取*}
+        {$talk|truncate:22:'..':true}<br />{*内容截取*}
+        {$talk|truncate:22:'..':true:true}<br />{*内容截取*}
+        {$talk|truncate:22:'..':true:true|upper|lower}<br />{*多个调剂器嵌套使用*}
+        {$content|truncate:2:'.'}<br />{*截取汉字*}
+    </body>
+</html>
